@@ -69,6 +69,9 @@ TRAVEL_NOT_EXPENSE = keep(300, 302, None, "footnote 1: the chart approves travel
 LOYALTY = keep(432, 437, None, "loyalty programmes only with the most cost-effective method, through the TMC")
 REVISION = keep(1399, 1402, None, "the 2020 revision: lowest fare as the standard, an option for flexibility for "
                 "those whose schedules frequently change")
+DM_RULES = keep(167, 172, None, "a deputy minister or CEO may set additional rules on expenses, consistent with the "
+               "directive")
+EXEMPTION = keep(207, 209, None, "only TB/MBC can grant an exemption from all or part of the directive")
 DIRECTION = keep(1064, 1064, "seeking timely direction when there are questions of application.",
                  "managers seek direction on questions of application")
 
@@ -364,8 +367,8 @@ scenario(
     "allows. I have to be at the summit.",
     london_trip("ASSISTANT_DEPUTY_MINISTER", "Sofia Marchetti", ADM_ECON),
     search("YYZ", "LHR", "2027-01-24", LONDON_FLIGHTS, LONDON_OFFERS),
-    expected("BOOK", ["frankfurt-economy"], ["ECONOMY"], ["UPGRADE_NOT_ELIGIBLE"], ["CABINET_SECRETARY", "NONE"],
-             AIR + MIN_CH + ABROAD_SECTIONS),
+    expected("BOOK", ["frankfurt-economy"], ["ECONOMY"], ["TRAVEL_APPROVAL_LEVEL", "UPGRADE_NOT_ELIGIBLE"],
+             ["CABINET_SECRETARY", "NONE"], AIR + MIN_CH + ABROAD_SECTIONS),
     [BUSINESS, LOWEST, CHART_ONE, ABROAD],
     "Business class 'must have prior approval by the deputy minister or CEO' (lines 559-560); the assistant deputy "
     "minister's approval is not that. The traveller accepts what the policy allows: the lowest fare, Lufthansa via "
@@ -416,7 +419,7 @@ scenario(
     halifax_trip(False),
     search("YYZ", "YHZ", "2027-01-27", HALIFAX_FLIGHTS, HALIFAX_OFFERS),
     expected("REFUSE", [], ["NONE"], ["CONTRACT_EXCLUDES_TRAVEL_COSTS", "OUTSIDE_POLICY_SCOPE"], ["CEO", "NONE"],
-             ["CONSULTANTS_AND_CONTRACTORS"]),
+             ["APPROVALS_FOR_TRAVEL", "CONSULTANTS_AND_CONTRACTORS"]),
     [CONTRACT, CONSULTANTS_COVERED, TRAVEL_NOT_EXPENSE],
     "Lines 1046-1048: a consultant or contractor can claim expenses only when the contract specifically allows for "
     "it, and this one does not cover travel. Footnote 1 (lines 300-302): the CEO's approval of the travel is not an "
@@ -683,7 +686,8 @@ scenario(
 scenario(
     "sorrel-beacon", "distractor", [],
     "Toronto to Winnipeg on January 19th for the hearings, which start at nine the next morning. Could you get me a "
-    "refundable fare, just in case plans shift? The CEO approved the trip.",
+    "refundable fare, just in case plans shift? If that isn't allowed, book what the policy allows; I have to be at the "
+    "hearings. The CEO approved the trip.",
     trip(traveller_name="Aaron Fischer", traveller_title="Case Manager", organization=HEARINGS,
          organization_kind="COMMISSION_PUBLIC_BODY", destination="YWG", travel_date="2027-01-19",
          booking_date="2026-11-30", business_starts="2027-01-20 09:00", purpose="Licensing hearings in Winnipeg",
@@ -838,15 +842,17 @@ scenario(
         offer("afternoon-flex", "afternoon", "ECONOMY", 33900, refundable=True),
     ]),
     expected("FLAG_FOR_APPROVAL", ["afternoon-economy", "afternoon-flex"], ["ECONOMY"],
-             ["APPROVAL_REQUIRED", "UNCLEAR_POLICY_TEXT"], ["MANAGER_SUPERVISOR", "NOT_NAMED"],
-             AIR + ["APPENDIX_REVISIONS"],
+             ["APPROVAL_REQUIRED", "UNCLEAR_POLICY_TEXT"],
+             ["DEPUTY_MINISTER", "MANAGER_SUPERVISOR", "NOT_NAMED", "TREASURY_BOARD"],
+             AIR + ["ACCOUNTABILITY_FRAMEWORK", "APPENDIX_REVISIONS", "MANAGERIAL_DISCRETION", "RESPONSIBILITIES"],
              phrase="added option for flexibility for those whose schedules frequently change"),
-    [LOWEST, REVISION, DIRECTION],
+    [LOWEST, REVISION, DIRECTION, DM_RULES, EXEMPTION],
     "The Air Travel text (lines 558-559) says to choose the lowest fare available, with no exception. Appendix C (lines "
     "1399-1402) says the 2020 revision of Airplane and Train 'added option for flexibility for those whose schedules "
     "frequently change', and this inspector's schedule does. Whether the directive lets them buy a changeable fare "
     "($339) above the lowest ($227) is open: hold either. No role is named; the manager seeks direction on questions "
-    "of application (line 1064).",
+    "of application (line 1064); a hold may also name the deputy minister, who may set additional rules on expenses "
+    "(lines 167-172), or TB/MBC, the only body that grants an exemption (lines 207-209).",
     flag_twins=["ember-sill", "sorrel-beacon"],
     ambiguity={"phrase": "added option for flexibility for those whose schedules frequently change",
                "readings": [("the 2020 revision gave travellers whose schedules frequently change the option of a "

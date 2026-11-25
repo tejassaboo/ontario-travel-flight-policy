@@ -297,7 +297,7 @@ def solve(trip, offers, hidden):
                       "business reason is gone and the trip is personal; the government buys no ticket.")
     if trip.traveller_role == R.CONSULTANT and not trip.contract_covers_travel_costs:
         return answer(Decision.REFUSE, [], [ReasonCode.CONTRACT_EXCLUDES_TRAVEL_COSTS, ReasonCode.OUTSIDE_POLICY_SCOPE],
-                      unused, [Clause.CONSULTANTS_AND_CONTRACTORS],
+                      unused, [Clause.CONSULTANTS_AND_CONTRACTORS, Clause.APPROVALS_FOR_TRAVEL],
                       "Lines 1046-1048: a consultant or contractor can claim expenses allowable under the directive "
                       "only when their contract specifically allows for it; this contract does not cover travel "
                       "costs, and footnote 1 (lines 300-302) says the travel approval is not an approval of "
@@ -409,15 +409,21 @@ def changeable(trip, economy, chosen, reasons, roles, clauses, notes):
                       "bought.")
     flexible = cheapest([offer for offer in economy if offer.refundable])
     one(flexible, "cheapest changeable fare")
-    approvers = [Approver.NOT_NAMED, *[role for role in roles if role == Approver.MANAGER_SUPERVISOR]]
+    # No role is named for the option. A hold may also name the deputy minister, who may set additional rules on
+    # expenses (lines 167-172), or TB/MBC, the only body that grants an exemption from the directive (lines 207-209).
+    approvers = [Approver.NOT_NAMED, Approver.DEPUTY_MINISTER, Approver.TREASURY_BOARD,
+                 *[role for role in roles if role == Approver.MANAGER_SUPERVISOR]]
     return answer(Decision.FLAG_FOR_APPROVAL, [chosen, *flexible], UNCLEAR_REASONS, approvers,
-                  [*AIR, Clause.APPENDIX_REVISIONS],
+                  [*AIR, Clause.APPENDIX_REVISIONS, Clause.RESPONSIBILITIES, Clause.ACCOUNTABILITY_FRAMEWORK,
+                   Clause.MANAGERIAL_DISCRETION],
                   "Lines 558-559 say to choose the lowest fare available, with no exception; Appendix C (lines "
                   "1399-1402) says the 2020 revision of Airplane and Train identified the lowest fare as the standard "
                   "and 'added option for flexibility for those whose schedules frequently change'. The traveller's "
                   "schedule does change often. Whether the directive gives them a changeable fare dearer than the "
                   "lowest is open: hold the lowest fare or the cheapest changeable fare. No role is named; the "
-                  "manager seeks direction on questions of application (line 1064).", phrase=FLEX_PHRASE)
+                  "manager seeks direction on questions of application (line 1064); the deputy minister may set "
+                  "additional rules (lines 167-172) and only TB/MBC grants an exemption (lines 207-209).",
+                  phrase=FLEX_PHRASE)
 
 
 def business_request(trip, seated, economy, roles, clauses, notes, where):
@@ -459,6 +465,8 @@ def business_request(trip, seated, economy, roles, clauses, notes, where):
         why = "the business-class approval on file is the traveller's own, and line 149 says approvers may not " \
               "approve their own expenses"
     elif record is not None:
+        # The sign-off is at the wrong level, so a reason naming the approval level is also right.
+        reasons.append(ReasonCode.TRAVEL_APPROVAL_LEVEL)
         why = f"the business-class approval on file is from the {record.role.value}, not the deputy minister or CEO"
     elif circumstance:
         why = "no deputy minister's or CEO's prior approval of business class is on file"

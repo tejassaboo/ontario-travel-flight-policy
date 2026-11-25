@@ -149,43 +149,22 @@ request states it); garnet-moor (an ADM is senior, but 559-560 names only the DM
 
 ## Acceptance outputs (final)
 
+The block first pasted here was another plugin's output (24 other scenario ids, a pack of
+idi-flight-policy). The audit (tests/AUDIT_NOTES.md) replaced it with this plugin's own run:
+
 ```
 $ uv run pytest -q
-209 passed in 1.62s
+196 passed, 3 skipped
 $ uv run ruff check .
 All checks passed!
 $ uv lock --check
-Resolved 42 packages in 9ms
+Resolved 42 packages in 8ms
 $ python3 ../_template/check_shared.py .
 : ok
 $ nanoagent plugin inspect .
 exit 0
-$ nanoagent plugin pack . /tmp/idi-flight-policy.tar.gz
-packed . into /tmp/idi-flight-policy.tar.gz (156989 bytes)
+$ nanoagent plugin pack . <scratch>/ontario.tar.gz
+packed (184155 bytes)
 $ python ../_template/tools/stock_verify.py .
-aspen-fjord          right=True score=1.00 identical=True wrong-decision-rejected=True
-birch-lagoon         right=True score=1.00 identical=True wrong-decision-rejected=True
-cobalt-tern          right=True score=1.00 identical=True wrong-decision-rejected=True
-dune-sorrel          right=True score=1.00 identical=True wrong-decision-rejected=True
-ember-kestrel        right=True score=1.00 identical=True wrong-decision-rejected=True
-fennel-quay          right=True score=1.00 identical=True wrong-decision-rejected=True
-garnet-brook         right=True score=1.00 identical=True wrong-decision-rejected=True
-heather-cove         right=True score=1.00 identical=True wrong-decision-rejected=True
-iris-shoal           right=True score=1.00 identical=True wrong-decision-rejected=True
-juniper-moss         right=True score=1.00 identical=True wrong-decision-rejected=True
-kelp-ridge           right=True score=1.00 identical=True wrong-decision-rejected=True
-larch-mere           right=True score=1.00 identical=True wrong-decision-rejected=True
-maple-tarn           right=True score=1.00 identical=True wrong-decision-rejected=True
-nutmeg-vale          right=True score=1.00 identical=True wrong-decision-rejected=True
-oriole-peak          right=True score=1.00 identical=True wrong-decision-rejected=True
-plover-glen          right=True score=1.00 identical=True wrong-decision-rejected=True
-quartz-heath         right=True score=1.00 identical=True wrong-decision-rejected=True
-rowan-strand         right=True score=1.00 identical=True wrong-decision-rejected=True
-saffron-isle         right=True score=1.00 identical=True wrong-decision-rejected=True
-tamarind-wold        right=True score=1.00 identical=True wrong-decision-rejected=True
-umber-loch           right=True score=1.00 identical=True wrong-decision-rejected=True
-violet-crag          right=True score=1.00 identical=True wrong-decision-rejected=True
-willow-burn          right=True score=1.00 identical=True wrong-decision-rejected=True
-yarrow-spit          right=True score=1.00 identical=True wrong-decision-rejected=True
-24 scenarios, 0 failures
+24 scenarios, 0 failures (every scenario right=True score=1.00 identical=True wrong-decision-rejected=True)
 ```

@@ -125,12 +125,17 @@
       "UNCLEAR_POLICY_TEXT"
     ],
     "approvers": [
+      "DEPUTY_MINISTER",
       "MANAGER_SUPERVISOR",
-      "NOT_NAMED"
+      "NOT_NAMED",
+      "TREASURY_BOARD"
     ],
     "clauses": [
+      "ACCOUNTABILITY_FRAMEWORK",
       "AIR_TRAVEL",
       "APPENDIX_REVISIONS",
+      "MANAGERIAL_DISCRETION",
+      "RESPONSIBILITIES",
       "TRANSPORTATION"
     ],
     "unclear_phrase": "added option for flexibility for those whose schedules frequently change"
@@ -162,8 +167,26 @@
       "sha256": "924b9bad1ce22fc63d6ce3fa7af297df64b2373bca91c36606e64644976088de",
       "quote": "seeking timely direction when there are questions of application.",
       "why": "managers seek direction on questions of application"
+    },
+    {
+      "lines": [
+        167,
+        172
+      ],
+      "sha256": "a2c9b50e7feae8cb74023e95d6aaf994a3e718d22e5cdc967bacdb6cb8824fea",
+      "quote": "A deputy minister or CEO has the authority to establish additional rules regarding expenses. Any additional rules must be consistent with those laid out in this Directive and be necessary to meet specific operational needs. These rules do not replace any rules in this Directive, nor can they substitute higher rates of reimbursement for kilometres or meals. Additional rules must include the date of approval and must be accessible to everyone covered by the rules.",
+      "why": "a deputy minister or CEO may set additional rules on expenses, consistent with the directive"
+    },
+    {
+      "lines": [
+        207,
+        209
+      ],
+      "sha256": "df0dbcf5df6acc522c071341dc4f94a0b2c273b8af78c4265f36e871c539d0e5",
+      "quote": "Only Treasury Board/Management Board of Cabinet (TB/MBC) can grant an exemption from all or part of this Directive. Ministries can apply for an exemption by bringing forward a business case to TB/MBC.",
+      "why": "only TB/MBC can grant an exemption from all or part of the directive"
     }
   ],
   "distractors": [],
-  "design_notes": "The Air Travel text (lines 558-559) says to choose the lowest fare available, with no exception. Appendix C (lines 1399-1402) says the 2020 revision of Airplane and Train 'added option for flexibility for those whose schedules frequently change', and this inspector's schedule does. Whether the directive lets them buy a changeable fare ($339) above the lowest ($227) is open: hold either. No role is named; the manager seeks direction on questions of application (line 1064)."
+  "design_notes": "The Air Travel text (lines 558-559) says to choose the lowest fare available, with no exception. Appendix C (lines 1399-1402) says the 2020 revision of Airplane and Train 'added option for flexibility for those whose schedules frequently change', and this inspector's schedule does. Whether the directive lets them buy a changeable fare ($339) above the lowest ($227) is open: hold either. No role is named; the manager seeks direction on questions of application (line 1064); a hold may also name the deputy minister, who may set additional rules on expenses (lines 167-172), or TB/MBC, the only body that grants an exemption (lines 207-209)."
 }
