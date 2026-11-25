@@ -1,0 +1,169 @@
+{
+  "id": "dune-mallow",
+  "category": "easy",
+  "overlays": [
+    "upgrade_not_taken",
+    "multi_leg"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Toronto to Vancouver on February 10th for the municipal finance forum, which opens at nine the next morning. Business class if the policy allows it; otherwise economy is fine, I just have to be there.",
+  "trip": {
+    "traveller_name": "Kevin Osei",
+    "traveller_title": "Program Manager",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ministry of Municipal Affairs",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YVR",
+    "travel_date": "2027-02-10",
+    "return_date": "",
+    "booking_date": "2026-12-08",
+    "business_starts": "2027-02-11 09:00",
+    "purpose": "Municipal finance forum in Vancouver",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "BUSINESS",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "SECRETARY_TB_MBC",
+        "name": "Helen Okafor",
+        "title": "Secretary, Treasury Board/Management Board of Cabinet",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the travel plan, on the form for travel within Canada and the USA"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YVR",
+        "date": "2027-02-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "07:45"
+          },
+          "calgary": {
+            "carrier": "WS",
+            "via": [
+              "YYC"
+            ],
+            "depart": "09:00",
+            "layovers": [
+              70
+            ]
+          },
+          "midday": {
+            "carrier": "AC",
+            "depart": "11:30"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 51500
+          },
+          {
+            "slot": "aircanada-business",
+            "flight": "aircanada",
+            "cabin": "BUSINESS",
+            "fare_cents": 198000
+          },
+          {
+            "slot": "calgary-economy",
+            "flight": "calgary",
+            "cabin": "ECONOMY",
+            "fare_cents": 44800
+          },
+          {
+            "slot": "midday-economy",
+            "flight": "midday",
+            "cabin": "ECONOMY",
+            "fare_cents": 49900
+          },
+          {
+            "slot": "midday-business",
+            "flight": "midday",
+            "cabin": "BUSINESS",
+            "fare_cents": 187000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "calgary-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "NONE",
+      "SECRETARY_TB_MBC"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_MINISTRIES",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        559,
+        564
+      ],
+      "sha256": "fa2bd1b82481c167d5bfaa9559c1c270afba23290d79c959762fb92a2f853591",
+      "quote": "Choose the lowest fare available when purchasing a ticket. Travel in business class must have prior approval by the deputy minister or CEO, in limited circumstances such as: • on international flights; and • on flights within Canada and the USA if related to the provision of reasonable accommodation (e.g., health reasons).",
+      "why": "business class only with the deputy minister's or CEO's prior approval: international flights, or Canada/USA flights for a reasonable accommodation"
+    },
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        306,
+        315
+      ],
+      "sha256": "b8a756a1802dd13f252fa317c7e117b37f16f715f06259bbaf697cb355e56b75",
+      "quote": "Chart 1 Level of Approval Required in Ministries Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Deputy Minister N/A3 Secretary, TB/MBC Secretary of the Cabinet Employee Manager/Supervisor4 Secretary, TB/MBC Secretary of the Cabinet Consultant Contract Manager Secretary, TB/MBC Secretary of the Cabinet",
+      "why": "Chart 1: who approves a ministry's travel plans, by role and destination"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 559-564: business class must have the deputy minister's or CEO's prior approval; none is on file, and a flight within Canada with no accommodation need is not one of the listed circumstances. The traveller accepts economy: the lowest fare is WestJet via Calgary at $448, landing the same afternoon (lines 558-559)."
+}

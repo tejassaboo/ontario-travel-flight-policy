@@ -1,0 +1,180 @@
+{
+  "id": "fennel-cove",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "garnet-moor",
+  "twin_fact": "business class approved by the deputy minister, or by an assistant deputy minister",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Toronto to London on January 24th for the trade summit, which opens on the 26th. The deputy minister approved business class for me in advance. Please book business; if that isn't enough, book what the policy allows. I have to be at the summit.",
+  "trip": {
+    "traveller_name": "Amara Nwosu",
+    "traveller_title": "Director, Trade Policy",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ministry of Economic Development and Trade",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "LHR",
+    "travel_date": "2027-01-24",
+    "return_date": "",
+    "booking_date": "2026-12-02",
+    "business_starts": "2027-01-26 09:00",
+    "purpose": "UK-Canada trade summit in London",
+    "purpose_kind": "NEGOTIATION",
+    "requested_cabin": "BUSINESS",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": true,
+    "sign_offs": [
+      {
+        "role": "CABINET_SECRETARY",
+        "name": "Gordon Achebe",
+        "title": "Secretary of the Cabinet",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the international travel plan, on the international travel form"
+      },
+      {
+        "role": "DEPUTY_MINISTER",
+        "name": "Raymond Cho",
+        "title": "Deputy Minister, Ministry of Economic Development and Trade",
+        "subject": "BUSINESS_CLASS",
+        "acting_for": "NONE",
+        "covers": "Approves business class for the flight to London"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "LHR",
+        "date": "2027-01-24",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "frankfurt": {
+            "carrier": "LH",
+            "via": [
+              "FRA"
+            ],
+            "depart": "16:40",
+            "layovers": [
+              95
+            ]
+          },
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "18:30"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "21:00"
+          }
+        },
+        "offers": [
+          {
+            "slot": "frankfurt-economy",
+            "flight": "frankfurt",
+            "cabin": "ECONOMY",
+            "fare_cents": 86400
+          },
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 98000
+          },
+          {
+            "slot": "aircanada-business",
+            "flight": "aircanada",
+            "cabin": "BUSINESS",
+            "fare_cents": 412000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 91500
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 389000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "british-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "BUSINESS_CLASS_APPROVED",
+      "INTERNATIONAL_LONG_FLIGHT"
+    ],
+    "approvers": [
+      "CABINET_SECRETARY",
+      "DEPUTY_MINISTER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_MINISTRIES",
+      "SECURITY_ASSESSMENT",
+      "TRANSPORTATION",
+      "TRAVELLING_OUTSIDE_CANADA"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        559,
+        564
+      ],
+      "sha256": "fa2bd1b82481c167d5bfaa9559c1c270afba23290d79c959762fb92a2f853591",
+      "quote": "Choose the lowest fare available when purchasing a ticket. Travel in business class must have prior approval by the deputy minister or CEO, in limited circumstances such as: • on international flights; and • on flights within Canada and the USA if related to the provision of reasonable accommodation (e.g., health reasons).",
+      "why": "business class only with the deputy minister's or CEO's prior approval: international flights, or Canada/USA flights for a reasonable accommodation"
+    },
+    {
+      "lines": [
+        306,
+        315
+      ],
+      "sha256": "b8a756a1802dd13f252fa317c7e117b37f16f715f06259bbaf697cb355e56b75",
+      "quote": "Chart 1 Level of Approval Required in Ministries Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Deputy Minister N/A3 Secretary, TB/MBC Secretary of the Cabinet Employee Manager/Supervisor4 Secretary, TB/MBC Secretary of the Cabinet Consultant Contract Manager Secretary, TB/MBC Secretary of the Cabinet",
+      "why": "Chart 1: who approves a ministry's travel plans, by role and destination"
+    },
+    {
+      "lines": [
+        447,
+        460
+      ],
+      "sha256": "9fa1a8dea679f91d0ee3210781fd80b298cd47fabaeae206ee22b89b28db70de",
+      "quote": "Requests for travel outside Canada must include: • prior documented approval; ministry and Commission public body employees must complete the appropriate form; o Request for Approval for Travel within Canada and the USA form; or o Request for Approval for International Travel form. • acknowledgement that all appropriate approvals are in place; • documented rationale demonstrating critical value of travel for government/ organizational priorities and interests, and how the travel will produce a benefit for the province; • documentation showing detailed itemization of anticipated expenses (note that the lowest cost and most reasonable method of travel must be used); and • confirmation that a security assessment for physical and cyber risk has been completed for the proposed travel destination.",
+      "why": "travel outside Canada: prior approval, lowest-cost method, security assessment"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "An international flight with the deputy minister's prior approval of business class (lines 559-562); the travel plan is approved by the Secretary of the Cabinet (Chart 1). The lowest business fare: British Airways at $3,890."
+}

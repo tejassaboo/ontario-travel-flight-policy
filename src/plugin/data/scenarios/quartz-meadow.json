@@ -1,0 +1,160 @@
+{
+  "id": "quartz-meadow",
+  "category": "hidden_clause",
+  "overlays": [
+    "date_arithmetic",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Toronto to Paris on March 2nd for the international film market, which opens on the 4th. Our chair approved the trip under the agency's special status. The security assessment is done.",
+  "trip": {
+    "traveller_name": "Chloe Martin",
+    "traveller_title": "International Sales Manager",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Provincial Film and Screen Investment Agency (a provincial agency whose staff are not public servants)",
+    "organization_kind": "OTHER_PROVINCIAL_AGENCY",
+    "special_status_granted_on": "2024-05-20",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "CDG",
+    "travel_date": "2027-03-02",
+    "return_date": "",
+    "booking_date": "2026-12-07",
+    "business_starts": "2027-03-04 09:00",
+    "purpose": "International film market in Paris",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": true,
+    "sign_offs": [
+      {
+        "role": "CHAIR",
+        "name": "Victor Lalonde",
+        "title": "Chair, Provincial Film and Screen Investment Agency",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the international travel plan under the agency's special status"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "CDG",
+        "date": "2027-03-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "17:45"
+          },
+          "airfrance": {
+            "carrier": "AF",
+            "depart": "19:30"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 91200
+          },
+          {
+            "slot": "airfrance-economy",
+            "flight": "airfrance",
+            "cabin": "ECONOMY",
+            "fare_cents": 87600
+          },
+          {
+            "slot": "airfrance-business",
+            "flight": "airfrance",
+            "cabin": "BUSINESS",
+            "fare_cents": 361000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "airfrance-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "CHAIR",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPENDIX_SPECIAL_STATUS",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_OTHER_AGENCIES",
+      "SECURITY_ASSESSMENT",
+      "SPECIAL_STATUS",
+      "TRANSPORTATION",
+      "TRAVELLING_OUTSIDE_CANADA"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        277,
+        291
+      ],
+      "sha256": "118f14894258cb7dfef86f732b15aa1496d0a6e314704e2f2a4f0ca6efc9ca78",
+      "quote": "For some provincial agencies/organizations, the requirement to travel internationally may be considered integral to their business. To ensure that the approvals process does not have an undue negative effect on the ability of the provincial agency/organization to conduct business, these provincial agencies/organizations may have the opportunity to request special status that would allow the chair to approve international travel instead of the positions listed in Chart 2 or 3. Only TB/MBC can approve special status. Ministries can apply for special status on behalf of their provincial agencies by bringing forward a business case to TB/MBC. If TB/MBC approves special status, the chair may approve international travel or delegate approval authority to the CEO. A provincial agency/organization with special status must report regularly to their ministry, see Appendix A for reporting requirements. Special status is approved for three years only. If special status continues to be required by the provincial agency/organization, the ministry must reapply to TB/MBC.",
+      "why": "special status lets the chair approve international travel; three years only"
+    },
+    {
+      "lines": [
+        1233,
+        1246
+      ],
+      "sha256": "efe68806f68080f682e34f78a2ccbd45a98ff7383e1dde70d5177bf00a24db82",
+      "quote": "• International travel (for provincial agencies/organizations) o The chair has the approval authority for international travel by persons in the provincial agency/organization, except for chair's own travel. o The chair may delegate approval authority to the CEO, except for approvals for appointees and for any positions reporting directly to the chair, including the CEO. o Prior documented approval is required. Role Approval Level Delegation of Authority Chair Minister No delegation Appointee Chair No delegation CEO Chair No delegation Employee Chair May delegate to the CEO Consultant/Contractor Chair May delegate to the CEO",
+      "why": "with special status the chair approves international travel by staff"
+    },
+    {
+      "lines": [
+        447,
+        460
+      ],
+      "sha256": "9fa1a8dea679f91d0ee3210781fd80b298cd47fabaeae206ee22b89b28db70de",
+      "quote": "Requests for travel outside Canada must include: • prior documented approval; ministry and Commission public body employees must complete the appropriate form; o Request for Approval for Travel within Canada and the USA form; or o Request for Approval for International Travel form. • acknowledgement that all appropriate approvals are in place; • documented rationale demonstrating critical value of travel for government/ organizational priorities and interests, and how the travel will produce a benefit for the province; • documentation showing detailed itemization of anticipated expenses (note that the lowest cost and most reasonable method of travel must be used); and • confirmation that a security assessment for physical and cyber risk has been completed for the proposed travel destination.",
+      "why": "travel outside Canada: prior approval, lowest-cost method, security assessment"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Chart 3 would send an agency employee's international travel to the Minister, but with special status the chair approves it (lines 277-282, 1233-1246). Special status lasts three years (line 290): granted 2024-05-20, it runs to 2027-05-20, past both today and the flight. The lowest fare: Air France at $876."
+}

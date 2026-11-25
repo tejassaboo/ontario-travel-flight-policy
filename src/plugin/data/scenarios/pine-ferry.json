@@ -1,0 +1,156 @@
+{
+  "id": "pine-ferry",
+  "category": "hidden_clause",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Toronto to Edmonton on January 6th for the licensing hearings at nine the next morning. Our CFO approved the trip under the CEO's delegation.",
+  "trip": {
+    "traveller_name": "Daniel Kim",
+    "traveller_title": "Case Analyst",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Provincial Land and Licensing Hearings Commission (a Commission public body)",
+    "organization_kind": "COMMISSION_PUBLIC_BODY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YEG",
+    "travel_date": "2027-01-06",
+    "return_date": "",
+    "booking_date": "2026-11-27",
+    "business_starts": "2027-01-07 09:00",
+    "purpose": "Licensing hearings in Edmonton",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "CFO",
+        "name": "Laura Bennett",
+        "title": "Chief Financial Officer, Provincial Land and Licensing Hearings Commission (a Commission public body)",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "CEO",
+        "covers": "Approves the trip to Edmonton under the CEO's written delegation of travel approvals for staff who do not report to the CEO"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YEG",
+        "date": "2027-01-06",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "08:00"
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "09:15"
+          },
+          "evening": {
+            "carrier": "AC",
+            "depart": "16:50"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 46800
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 41900
+          },
+          {
+            "slot": "westjet-business",
+            "flight": "westjet",
+            "cabin": "BUSINESS",
+            "fare_cents": 154000
+          },
+          {
+            "slot": "evening-economy",
+            "flight": "evening",
+            "cabin": "ECONOMY",
+            "fare_cents": 44300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "westjet-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "CEO",
+      "CFO",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_COMMISSION_PUBLIC_BODIES",
+      "DELEGATION_OF_AUTHORITY",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        317,
+        328
+      ],
+      "sha256": "3ff9edf51cc3f42cbd045d5e8257f2d7884ccc11a6bdbbc1642d9d5945222468",
+      "quote": "Chart 2 Level of Approval Required in Provincial Agencies whose Employees are Appointed under section 32 of the PSOA - Commission public bodies Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Chair N/A3 N/A3 Minister Appointee Chair Chair Minister CEO N/A3 N/A3 Secretary of the Cabinet Employee Manager/Supervisor4 CEO Secretary of the Cabinet Consultant Contract Manager CEO Secretary of the Cabinet",
+      "why": "Chart 2: who approves a Commission public body's travel plans"
+    },
+    {
+      "lines": [
+        396,
+        405
+      ],
+      "sha256": "fb63d22556076f75bcb2587697a5a02cf01a0334b61e50505bd4896ddaef3a07",
+      "quote": "Chief Executive Officer (CEO) yes, but not for direct reports for others, delegation limited to the CFO or equivalent level, no further delegation subject to limitations/ requirements identified by the CEO",
+      "why": "the CEO may delegate travel approval to the CFO, not for direct reports"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A Commission public body employee travelling outside Ontario within Canada needs the CEO's approval (Chart 2). The CEO may delegate it to the CFO, but not for direct reports (lines 396-405); the CFO signed under that written delegation for a case analyst. The lowest fare: WestJet at $419 (lines 558-559)."
+}

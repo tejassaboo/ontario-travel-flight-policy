@@ -1,0 +1,123 @@
+{
+  "id": "tansy-grove",
+  "category": "refusal",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I live in Ottawa and my job is at the ministry's Toronto head office. Please book my usual Monday morning flight to the office on December 7th; I'm due in at ten.",
+  "trip": {
+    "traveller_name": "Jonathan Reyes",
+    "traveller_title": "Senior Economist",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ministry of Economic Development and Trade",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Ottawa",
+    "workplace_city": "Toronto",
+    "origin": "YOW",
+    "destination": "YYZ",
+    "travel_date": "2026-12-07",
+    "return_date": "",
+    "booking_date": "2026-11-25",
+    "business_starts": "2026-12-07 10:00",
+    "purpose": "A regular working week at his own office in Toronto",
+    "purpose_kind": "REGULAR_OFFICE_DAY",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YOW",
+        "destination": "YYZ",
+        "date": "2026-12-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "early": {
+            "carrier": "AC",
+            "depart": "06:30",
+            "minutes": [
+              65
+            ]
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "07:15",
+            "minutes": [
+              65
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "early-economy",
+            "flight": "early",
+            "cabin": "ECONOMY",
+            "fare_cents": 24800
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 22600
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED",
+      "REGULAR_COMMUTE"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        239,
+        241
+      ],
+      "sha256": "441152efaa8f88a609c5611f37438d25b895dbc59a5573e4afd04ce0f23fb65b",
+      "quote": "This Directive applies whenever travel is required. For the purpose of this Directive, travel does not refer to a person's regular commute to work - expenses related to a person's regular commute are not reimbursable.",
+      "why": "a regular commute is not travel and is not reimbursable"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        244,
+        245
+      ],
+      "quote": "There are some jobs where frequent travel is a requirement",
+      "why": "a job with frequent travel does not change the fare rule"
+    }
+  ],
+  "design_notes": "Lines 239-241: travel does not refer to a person's regular commute to work, and its expenses are not reimbursable. Flying from home to his own regular workplace is that commute; the ministry buys no ticket."
+}

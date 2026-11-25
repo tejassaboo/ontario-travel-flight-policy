@@ -1,0 +1,137 @@
+{
+  "id": "umber-reed",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The housing conference in Vancouver on January 29th has been cancelled, but I'd still like to fly out on the 28th as planned; my sister lives there and I'll take a few vacation days. The trip was already approved, so please book it.",
+  "trip": {
+    "traveller_name": "Hannah Wright",
+    "traveller_title": "Housing Policy Advisor",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ministry of Municipal Affairs",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YVR",
+    "travel_date": "2027-01-28",
+    "return_date": "",
+    "booking_date": "2026-12-02",
+    "business_starts": "2027-01-29 09:00",
+    "purpose": "Visit to her sister in Vancouver while on vacation; the housing conference she was approved to attend is cancelled",
+    "purpose_kind": "PERSONAL_VISIT",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "SECRETARY_TB_MBC",
+        "name": "Helen Okafor",
+        "title": "Secretary, Treasury Board/Management Board of Cabinet",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approved the travel plan for the housing conference, now cancelled"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YVR",
+        "date": "2027-01-28",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "08:30"
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "11:00"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 50200
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 46700
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE",
+      "SECRETARY_TB_MBC"
+    ],
+    "clauses": [
+      "GENERAL_REQUIREMENTS",
+      "PRINCIPLES",
+      "TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        111,
+        112
+      ],
+      "sha256": "525193410de2bb1024fa1636928b41168a02a60e3b4cdd61652ea2b5f224aa8f",
+      "quote": "• Legitimate authorized expenses incurred during the course of government business are reimbursed.",
+      "why": "only legitimate expenses in the course of government business are reimbursed"
+    },
+    {
+      "lines": [
+        145,
+        146
+      ],
+      "sha256": "66fce83e36336b04bb6575e097b4921902f136baaf9980e541f19f93385cb52b",
+      "quote": "• provide approval only for expenses that were necessarily incurred in the performance of ministry or provincial agency/organization business.",
+      "why": "approval only for expenses necessarily incurred in government business"
+    },
+    {
+      "lines": [
+        239,
+        241
+      ],
+      "sha256": "441152efaa8f88a609c5611f37438d25b895dbc59a5573e4afd04ce0f23fb65b",
+      "quote": "This Directive applies whenever travel is required. For the purpose of this Directive, travel does not refer to a person's regular commute to work - expenses related to a person's regular commute are not reimbursable.",
+      "why": "a regular commute is not travel and is not reimbursable"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 111-112: only legitimate expenses incurred in the course of government business are reimbursed; lines 145-146: approval only for expenses necessarily incurred in government business; line 239: the directive applies when travel is required. With the conference cancelled the trip is personal, and the earlier approval was for the conference. The ministry buys no ticket."
+}

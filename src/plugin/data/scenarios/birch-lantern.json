@@ -1,0 +1,151 @@
+{
+  "id": "birch-lantern",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me Toronto to Chicago on January 13th for the Great Lakes trade conference, which opens at nine the next morning. The Secretary of Treasury Board has approved the trip and the security assessment is done.",
+  "trip": {
+    "traveller_name": "Marcus Feld",
+    "traveller_title": "Senior Trade Analyst",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ministry of Economic Development and Trade",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "ORD",
+    "travel_date": "2027-01-13",
+    "return_date": "",
+    "booking_date": "2026-12-01",
+    "business_starts": "2027-01-14 09:00",
+    "purpose": "Great Lakes trade conference in Chicago",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": true,
+    "sign_offs": [
+      {
+        "role": "SECRETARY_TB_MBC",
+        "name": "Helen Okafor",
+        "title": "Secretary, Treasury Board/Management Board of Cabinet",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the travel plan, on the form for travel within Canada and the USA"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "ORD",
+        "date": "2027-01-13",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "early": {
+            "carrier": "AC",
+            "depart": "07:10"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "09:40"
+          },
+          "afternoon": {
+            "carrier": "AC",
+            "depart": "13:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "early-economy",
+            "flight": "early",
+            "cabin": "ECONOMY",
+            "fare_cents": 33500,
+            "seats": false
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 36800
+          },
+          {
+            "slot": "afternoon-economy",
+            "flight": "afternoon",
+            "cabin": "ECONOMY",
+            "fare_cents": 39200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "united-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "SECRETARY_TB_MBC"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_MINISTRIES",
+      "SECURITY_ASSESSMENT",
+      "TRANSPORTATION",
+      "TRAVELLING_OUTSIDE_CANADA"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        306,
+        315
+      ],
+      "sha256": "b8a756a1802dd13f252fa317c7e117b37f16f715f06259bbaf697cb355e56b75",
+      "quote": "Chart 1 Level of Approval Required in Ministries Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Deputy Minister N/A3 Secretary, TB/MBC Secretary of the Cabinet Employee Manager/Supervisor4 Secretary, TB/MBC Secretary of the Cabinet Consultant Contract Manager Secretary, TB/MBC Secretary of the Cabinet",
+      "why": "Chart 1: who approves a ministry's travel plans, by role and destination"
+    },
+    {
+      "lines": [
+        466,
+        467
+      ],
+      "sha256": "fc580042bd2ab0a29e87b52e65258edd4af79190258c9a1156ed6ef6adb3f487",
+      "quote": "When travelling outside Canada, including the USA, a prior assessment of physical and cyber security is required.",
+      "why": "a security assessment before any trip outside Canada"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A ministry employee to the USA: Chart 1 gives the Secretary, TB/MBC, whose approval is on file; the security assessment is done (lines 466-467). The 07:10 seat at $335 is sold out, so the lowest fare available is United at $368 (lines 558-559)."
+}

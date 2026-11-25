@@ -1,0 +1,16 @@
+{
+  "id": "ontario-travel-flight-policy",
+  "name": "Ontario Travel Directive Flight Booking",
+  "slug": "ontario-travel",
+  "title": "Ontario Travel, Meal and Hospitality Expenses Directive (Management Board of Cabinet, last amended January 1, 2020)",
+  "frozen_file": "ontario-travel_policy.txt",
+  "sha256": "b16edb832da35d0b8f9876b742e15d95f68d623dc761e64afc31abd0f4e79806",
+  "raw_pdf_sha256": "c421d966767a684a1602e763621e538ac11ee67b4751fff3a42ad151e7605aaa",
+  "words": 9623,
+  "lines": 1504,
+  "source": "not recorded locally (UNVERIFIED); the raw PDF is the pinned copy (Government of Ontario)",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 24,
+  "currency": "CAD",
+  "background_offers": 0
+}

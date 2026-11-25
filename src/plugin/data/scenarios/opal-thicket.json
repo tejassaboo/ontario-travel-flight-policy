@@ -1,0 +1,173 @@
+{
+  "id": "opal-thicket",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Toronto to London on February 14th for the reactor safety workshop, which opens on the 16th. The Minister of Energy approved the trip and our CEO approved business class for me. Business class, please.",
+  "trip": {
+    "traveller_name": "Samuel Adeyemi",
+    "traveller_title": "Senior Nuclear Safety Engineer",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ontario Power Generation Inc.",
+    "organization_kind": "ELECTRICITY_ORGANIZATION",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "LHR",
+    "travel_date": "2027-02-14",
+    "return_date": "",
+    "booking_date": "2026-12-01",
+    "business_starts": "2027-02-16 09:00",
+    "purpose": "International reactor safety workshop in London",
+    "purpose_kind": "TRAINING",
+    "requested_cabin": "BUSINESS",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": true,
+    "sign_offs": [
+      {
+        "role": "MINISTER",
+        "name": "Hon. Patricia Wong",
+        "title": "Minister of Energy",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the international travel plan"
+      },
+      {
+        "role": "CEO",
+        "name": "Martin Keller",
+        "title": "President and Chief Executive Officer, Ontario Power Generation Inc.",
+        "subject": "BUSINESS_CLASS",
+        "acting_for": "NONE",
+        "covers": "Approves business class for the flight to London"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "LHR",
+        "date": "2027-02-14",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "18:30"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "20:45"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 96500
+          },
+          {
+            "slot": "aircanada-business",
+            "flight": "aircanada",
+            "cabin": "BUSINESS",
+            "fare_cents": 405000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 92800
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 392000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "british-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "BUSINESS_CLASS_APPROVED",
+      "INTERNATIONAL_LONG_FLIGHT"
+    ],
+    "approvers": [
+      "CEO",
+      "MINISTER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_OTHER_AGENCIES",
+      "SECURITY_ASSESSMENT",
+      "TRANSPORTATION",
+      "TRAVELLING_OUTSIDE_CANADA"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        559,
+        564
+      ],
+      "sha256": "fa2bd1b82481c167d5bfaa9559c1c270afba23290d79c959762fb92a2f853591",
+      "quote": "Choose the lowest fare available when purchasing a ticket. Travel in business class must have prior approval by the deputy minister or CEO, in limited circumstances such as: • on international flights; and • on flights within Canada and the USA if related to the provision of reasonable accommodation (e.g., health reasons).",
+      "why": "business class only with the deputy minister's or CEO's prior approval: international flights, or Canada/USA flights for a reasonable accommodation"
+    },
+    {
+      "lines": [
+        330,
+        341
+      ],
+      "sha256": "7a4b6755185472ce63861b156b2341bcd6e977f25e8f316900917e29fc1231b7",
+      "quote": "Chart 3 Level of Approval Required in Provincial Agencies/Organizations whose Employees are Not Appointed under section 32 of the PSOA Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Chair N/A3 N/A3 Minister Appointee Chair Chair Minister CEO N/A3 N/A3 Minister Employee Manager/Supervisor4 CEO Minister Consultant Contract Manager CEO Minister",
+      "why": "Chart 3: who approves other agencies' and organizations' travel plans"
+    },
+    {
+      "lines": [
+        271,
+        273
+      ],
+      "sha256": "b7b843fea1cd1fa511b9b3b0fc3d9edd5d31af1517eaec0fa7087ee460f757b0",
+      "quote": "Chart 3: Other provincial agencies/organizations whose employees are not appointed under section 32 of the PSOA (includes the Independent Electricity System Operator and Ontario Power Generation Inc.)",
+      "why": "Chart 3 includes the electricity system operator and Ontario Power Generation"
+    },
+    {
+      "lines": [
+        447,
+        460
+      ],
+      "sha256": "9fa1a8dea679f91d0ee3210781fd80b298cd47fabaeae206ee22b89b28db70de",
+      "quote": "Requests for travel outside Canada must include: • prior documented approval; ministry and Commission public body employees must complete the appropriate form; o Request for Approval for Travel within Canada and the USA form; or o Request for Approval for International Travel form. • acknowledgement that all appropriate approvals are in place; • documented rationale demonstrating critical value of travel for government/ organizational priorities and interests, and how the travel will produce a benefit for the province; • documentation showing detailed itemization of anticipated expenses (note that the lowest cost and most reasonable method of travel must be used); and • confirmation that a security assessment for physical and cyber risk has been completed for the proposed travel destination.",
+      "why": "travel outside Canada: prior approval, lowest-cost method, security assessment"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Ontario Power Generation is under Chart 3 (lines 271-273): an employee's international travel is approved by the Minister, and that approval is on file. Business class on an international flight with the CEO's prior approval (lines 559-562). The lowest business fare: British Airways at $3,920."
+}

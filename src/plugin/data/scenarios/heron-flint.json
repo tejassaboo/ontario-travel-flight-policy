@@ -1,0 +1,156 @@
+{
+  "id": "heron-flint",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg"
+  ],
+  "twin_of": "iris-kettle",
+  "twin_fact": "the contract covers travel costs, or does not",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm a contractor to the hearings commission. My contract covers my travel costs, and the CEO approved this trip. Please book Toronto to Halifax on January 27th on the commission's account; the hearings start at nine the next morning.",
+  "trip": {
+    "traveller_name": "Ethan Clarke",
+    "traveller_title": "Contract hearing transcription specialist",
+    "traveller_role": "CONSULTANT",
+    "organization": "Provincial Land and Licensing Hearings Commission (a Commission public body)",
+    "organization_kind": "COMMISSION_PUBLIC_BODY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": true,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YHZ",
+    "travel_date": "2027-01-27",
+    "return_date": "",
+    "booking_date": "2026-12-03",
+    "business_starts": "2027-01-28 09:00",
+    "purpose": "Transcribing the Atlantic licensing hearings in Halifax",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "CEO",
+        "name": "Daniel Mercer",
+        "title": "Chief Executive Officer, Provincial Land and Licensing Hearings Commission (a Commission public body)",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the consultant's trip to Halifax"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YHZ",
+        "date": "2027-01-27",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "montreal": {
+            "carrier": "AC",
+            "via": [
+              "YUL"
+            ],
+            "depart": "07:30",
+            "layovers": [
+              65
+            ]
+          },
+          "nonstop": {
+            "carrier": "AC",
+            "depart": "09:10"
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "14:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "montreal-economy",
+            "flight": "montreal",
+            "cabin": "ECONOMY",
+            "fare_cents": 39800
+          },
+          {
+            "slot": "nonstop-economy",
+            "flight": "nonstop",
+            "cabin": "ECONOMY",
+            "fare_cents": 46200
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 43300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "montreal-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "CEO",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_COMMISSION_PUBLIC_BODIES",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        317,
+        328
+      ],
+      "sha256": "3ff9edf51cc3f42cbd045d5e8257f2d7884ccc11a6bdbbc1642d9d5945222468",
+      "quote": "Chart 2 Level of Approval Required in Provincial Agencies whose Employees are Appointed under section 32 of the PSOA - Commission public bodies Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Chair N/A3 N/A3 Minister Appointee Chair Chair Minister CEO N/A3 N/A3 Secretary of the Cabinet Employee Manager/Supervisor4 CEO Secretary of the Cabinet Consultant Contract Manager CEO Secretary of the Cabinet",
+      "why": "Chart 2: who approves a Commission public body's travel plans"
+    },
+    {
+      "lines": [
+        1046,
+        1048
+      ],
+      "sha256": "80565a2d1119a5efe5b1bacf57e16d61b3999bec4a97b45fbfa2d23c959ce6f1",
+      "quote": "Reimbursement for allowable expenses under this Directive can be claimed only when the contract with the government or provincial agency/organization specifically allows for it.",
+      "why": "a contractor's expenses only when the contract allows for them"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A consultant to a Commission public body travelling outside Ontario within Canada: the CEO approves (Chart 2), and the contract allows travel costs (lines 1046-1048). The lowest fare: Air Canada via Montreal at $398."
+}

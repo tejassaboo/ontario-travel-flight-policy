@@ -1,0 +1,151 @@
+{
+  "id": "iris-kettle",
+  "category": "boundary_twin",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "heron-flint",
+  "twin_fact": "the contract covers travel costs, or does not",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm a contractor to the hearings commission. My contract covers my fees only, not travel costs, but the CEO approved this trip. Please book Toronto to Halifax on January 27th on the commission's account; the hearings start at nine the next morning.",
+  "trip": {
+    "traveller_name": "Ethan Clarke",
+    "traveller_title": "Contract hearing transcription specialist",
+    "traveller_role": "CONSULTANT",
+    "organization": "Provincial Land and Licensing Hearings Commission (a Commission public body)",
+    "organization_kind": "COMMISSION_PUBLIC_BODY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YHZ",
+    "travel_date": "2027-01-27",
+    "return_date": "",
+    "booking_date": "2026-12-03",
+    "business_starts": "2027-01-28 09:00",
+    "purpose": "Transcribing the Atlantic licensing hearings in Halifax",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "CEO",
+        "name": "Daniel Mercer",
+        "title": "Chief Executive Officer, Provincial Land and Licensing Hearings Commission (a Commission public body)",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the consultant's trip to Halifax"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YHZ",
+        "date": "2027-01-27",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "montreal": {
+            "carrier": "AC",
+            "via": [
+              "YUL"
+            ],
+            "depart": "07:30",
+            "layovers": [
+              65
+            ]
+          },
+          "nonstop": {
+            "carrier": "AC",
+            "depart": "09:10"
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "14:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "montreal-economy",
+            "flight": "montreal",
+            "cabin": "ECONOMY",
+            "fare_cents": 39800
+          },
+          {
+            "slot": "nonstop-economy",
+            "flight": "nonstop",
+            "cabin": "ECONOMY",
+            "fare_cents": 46200
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 43300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "CONTRACT_EXCLUDES_TRAVEL_COSTS",
+      "OUTSIDE_POLICY_SCOPE"
+    ],
+    "approvers": [
+      "CEO",
+      "NONE"
+    ],
+    "clauses": [
+      "CONSULTANTS_AND_CONTRACTORS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        1046,
+        1048
+      ],
+      "sha256": "80565a2d1119a5efe5b1bacf57e16d61b3999bec4a97b45fbfa2d23c959ce6f1",
+      "quote": "Reimbursement for allowable expenses under this Directive can be claimed only when the contract with the government or provincial agency/organization specifically allows for it.",
+      "why": "a contractor's expenses only when the contract allows for them"
+    },
+    {
+      "lines": [
+        78,
+        79
+      ],
+      "sha256": "148faddf5d5263769547b092a1fac841ac298e01d2a98a9be29516316a46c239",
+      "quote": "The Directive also applies to consultants and contractors to ministries or provincial agencies/organizations.",
+      "why": "the directive applies to consultants and contractors"
+    },
+    {
+      "lines": [
+        300,
+        302
+      ],
+      "sha256": "177b31866fab33c540cd521b1840299a94a941012f850ddd1e35d66933a424f9",
+      "quote": "1 These are the levels for approving travel, not for approving any expenses related to travel. Approval of expenses rests with the individuals in organizations that have financial approval authority (through the financial delegation of authority for OPS employees, or applicable mechanism in other organizations.)",
+      "why": "footnote 1: the chart approves travel, not the expenses of it"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 1046-1048: a consultant or contractor can claim expenses only when the contract specifically allows for it, and this one does not cover travel. Footnote 1 (lines 300-302): the CEO's approval of the travel is not an approval of its expenses. The commission buys no ticket."
+}

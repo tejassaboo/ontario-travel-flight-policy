@@ -1,0 +1,156 @@
+{
+  "id": "vetch-harbor",
+  "category": "flag",
+  "overlays": [
+    "approval_required",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "alder-quay",
+    "birch-lantern"
+  ],
+  "ambiguity_note": "none: the Secretary, TB/MBC's approval is required and missing; the text is clear",
+  "request": "Toronto to Boston on January 20th for the northeast transit planning summit, which opens at nine the next morning. My manager approved the trip last week and the security assessment is done, so please go ahead and book.",
+  "trip": {
+    "traveller_name": "Priyanka Shah",
+    "traveller_title": "Transit Planning Analyst",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ministry of Municipal Affairs",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "BOS",
+    "travel_date": "2027-01-20",
+    "return_date": "",
+    "booking_date": "2026-12-03",
+    "business_starts": "2027-01-21 09:00",
+    "purpose": "Northeast transit planning summit in Boston",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER_SUPERVISOR",
+        "name": "Tom Ellis",
+        "title": "Manager, Transit Policy",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the trip to Boston"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "BOS",
+        "date": "2027-01-20",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "08:05"
+          },
+          "jetblue": {
+            "carrier": "B6",
+            "depart": "11:20"
+          },
+          "evening": {
+            "carrier": "AC",
+            "depart": "16:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 40100
+          },
+          {
+            "slot": "jetblue-economy",
+            "flight": "jetblue",
+            "cabin": "ECONOMY",
+            "fare_cents": 35600
+          },
+          {
+            "slot": "evening-economy",
+            "flight": "evening",
+            "cabin": "ECONOMY",
+            "fare_cents": 37900
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "jetblue-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "TRAVEL_APPROVAL_LEVEL"
+    ],
+    "approvers": [
+      "DEPUTY_MINISTER",
+      "SECRETARY_TB_MBC"
+    ],
+    "clauses": [
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "BEFORE_TRAVELLING",
+      "CHART_MINISTRIES",
+      "SECURITY_ASSESSMENT",
+      "TRAVELLING_OUTSIDE_CANADA"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        306,
+        315
+      ],
+      "sha256": "b8a756a1802dd13f252fa317c7e117b37f16f715f06259bbaf697cb355e56b75",
+      "quote": "Chart 1 Level of Approval Required in Ministries Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Deputy Minister N/A3 Secretary, TB/MBC Secretary of the Cabinet Employee Manager/Supervisor4 Secretary, TB/MBC Secretary of the Cabinet Consultant Contract Manager Secretary, TB/MBC Secretary of the Cabinet",
+      "why": "Chart 1: who approves a ministry's travel plans, by role and destination"
+    },
+    {
+      "lines": [
+        409,
+        412
+      ],
+      "sha256": "6a1340027ea17abcb385525e17571a2860912b7699ed2e2f93b8b4690cf0d5d5",
+      "quote": "• Where required, obtain prior documented approval for travel and use the appropriate forms. As a best practice, obtain prior documented approval for any travel. Note that prior approval is required even in situations where expenses are covered by a third party.",
+      "why": "prior documented approval for travel"
+    },
+    {
+      "lines": [
+        447,
+        460
+      ],
+      "sha256": "9fa1a8dea679f91d0ee3210781fd80b298cd47fabaeae206ee22b89b28db70de",
+      "quote": "Requests for travel outside Canada must include: • prior documented approval; ministry and Commission public body employees must complete the appropriate form; o Request for Approval for Travel within Canada and the USA form; or o Request for Approval for International Travel form. • acknowledgement that all appropriate approvals are in place; • documented rationale demonstrating critical value of travel for government/ organizational priorities and interests, and how the travel will produce a benefit for the province; • documentation showing detailed itemization of anticipated expenses (note that the lowest cost and most reasonable method of travel must be used); and • confirmation that a security assessment for physical and cyber risk has been completed for the proposed travel destination.",
+      "why": "travel outside Canada: prior approval, lowest-cost method, security assessment"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A ministry employee travelling outside Ontario within Canada and the USA needs the Secretary, TB/MBC's approval (Chart 1), or that of the deputy minister under its written delegation (lines 382-390); a manager's approval covers only travel within Ontario. Lines 409-412 and 447-452: prior documented approval. Hold the lowest fare, JetBlue at $356, for that approval. Approval required, not 'no compliant offer'."
+}

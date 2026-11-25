@@ -1,0 +1,159 @@
+{
+  "id": "nutmeg-shoal",
+  "category": "multi_rule",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please put me on Air Canada so I keep collecting Aeroplan points; if that isn't allowed, book what the policy allows. Toronto to Calgary on January 11th for the regulators' meeting at nine the next morning. The CEO approved the trip.",
+  "trip": {
+    "traveller_name": "Rebecca Hall",
+    "traveller_title": "Licensing Coordinator",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Provincial Land and Licensing Hearings Commission (a Commission public body)",
+    "organization_kind": "COMMISSION_PUBLIC_BODY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YYC",
+    "travel_date": "2027-01-11",
+    "return_date": "",
+    "booking_date": "2026-11-26",
+    "business_starts": "2027-01-12 09:00",
+    "purpose": "National licensing regulators' meeting in Calgary",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "Air Canada",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "CEO",
+        "name": "Daniel Mercer",
+        "title": "Chief Executive Officer, Provincial Land and Licensing Hearings Commission (a Commission public body)",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the trip to Calgary"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YYC",
+        "date": "2027-01-11",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "morning": {
+            "carrier": "AC",
+            "depart": "08:20"
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "10:05"
+          },
+          "afternoon": {
+            "carrier": "AC",
+            "depart": "14:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "morning-economy",
+            "flight": "morning",
+            "cabin": "ECONOMY",
+            "fare_cents": 45900
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 38700
+          },
+          {
+            "slot": "afternoon-economy",
+            "flight": "afternoon",
+            "cabin": "ECONOMY",
+            "fare_cents": 42100
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "westjet-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "LOYALTY_PROGRAM_PREFERENCE"
+    ],
+    "approvers": [
+      "CEO",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "BEFORE_TRAVELLING",
+      "CHART_COMMISSION_PUBLIC_BODIES",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        432,
+        437
+      ],
+      "sha256": "973271c05c5d2996f064ae99c7d50628118cd2462c8a83446473fd4c2887522e",
+      "quote": "• Participation in frequent flyer or other loyalty programs is permitted provided that you: o choose the most cost-effective accommodation or method of travel; o use the corporate travel management company to book your method of travel; and o use the corporate travel card to pay for all travel expenses.",
+      "why": "loyalty programmes only with the most cost-effective method, through the TMC"
+    },
+    {
+      "lines": [
+        317,
+        328
+      ],
+      "sha256": "3ff9edf51cc3f42cbd045d5e8257f2d7884ccc11a6bdbbc1642d9d5945222468",
+      "quote": "Chart 2 Level of Approval Required in Provincial Agencies whose Employees are Appointed under section 32 of the PSOA - Commission public bodies Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Chair N/A3 N/A3 Minister Appointee Chair Chair Minister CEO N/A3 N/A3 Secretary of the Cabinet Employee Manager/Supervisor4 CEO Secretary of the Cabinet Consultant Contract Manager CEO Secretary of the Cabinet",
+      "why": "Chart 2: who approves a Commission public body's travel plans"
+    },
+    {
+      "lines": [
+        545,
+        548
+      ],
+      "sha256": "6082ba3862f5d12f54caa32bcb2d0e28d4a4a5fede6f7c5034e2b98d32efe66c",
+      "quote": "Ministry employees should make travel reservations through the government's travel management company or book online through the Travel Gateway website. • Use the government's travel management company, when booking airfare or making multiple travel arrangements in combination with airfare.",
+      "why": "airfare is booked through the government's travel management company"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 432-437: loyalty programmes are allowed only when the most cost-effective method of travel is chosen; lines 558-559: the lowest fare. Air Canada's cheapest is $421; WestJet is $387. The CEO approved the trip (Chart 2)."
+}

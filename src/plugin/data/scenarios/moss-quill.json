@@ -1,0 +1,191 @@
+{
+  "id": "moss-quill",
+  "category": "multi_rule",
+  "overlays": [
+    "upgrade_not_taken",
+    "multi_leg",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Toronto to London on March 7th for the cultural agencies forum on the 9th. As CEO I've approved business class for myself. Book business; if that isn't enough, book what the policy allows. I have to be at the forum.",
+  "trip": {
+    "traveller_name": "Isabelle Fontaine",
+    "traveller_title": "Chief Executive Officer",
+    "traveller_role": "CEO",
+    "organization": "Provincial Arts and Heritage Grants Commission (a Commission public body)",
+    "organization_kind": "COMMISSION_PUBLIC_BODY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "LHR",
+    "travel_date": "2027-03-07",
+    "return_date": "",
+    "booking_date": "2026-12-04",
+    "business_starts": "2027-03-09 09:00",
+    "purpose": "International cultural agencies forum in London",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "BUSINESS",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": true,
+    "sign_offs": [
+      {
+        "role": "CABINET_SECRETARY",
+        "name": "Gordon Achebe",
+        "title": "Secretary of the Cabinet",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the international travel plan, on the international travel form"
+      },
+      {
+        "role": "CEO",
+        "name": "Isabelle Fontaine",
+        "title": "Chief Executive Officer, Provincial Arts and Heritage Grants Commission",
+        "subject": "BUSINESS_CLASS",
+        "acting_for": "NONE",
+        "covers": "Approves business class for the flight to London"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "LHR",
+        "date": "2027-03-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "17:10",
+            "layovers": [
+              85
+            ]
+          },
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "19:00"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "21:30"
+          }
+        },
+        "offers": [
+          {
+            "slot": "amsterdam-economy",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 87900
+          },
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 94000
+          },
+          {
+            "slot": "aircanada-business",
+            "flight": "aircanada",
+            "cabin": "BUSINESS",
+            "fare_cents": 401000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 90500
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 386000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "amsterdam-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "SELF_APPROVAL_NOT_ALLOWED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "CABINET_SECRETARY",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_COMMISSION_PUBLIC_BODIES",
+      "GENERAL_REQUIREMENTS",
+      "SECURITY_ASSESSMENT",
+      "TRANSPORTATION",
+      "TRAVELLING_OUTSIDE_CANADA"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        559,
+        564
+      ],
+      "sha256": "fa2bd1b82481c167d5bfaa9559c1c270afba23290d79c959762fb92a2f853591",
+      "quote": "Choose the lowest fare available when purchasing a ticket. Travel in business class must have prior approval by the deputy minister or CEO, in limited circumstances such as: • on international flights; and • on flights within Canada and the USA if related to the provision of reasonable accommodation (e.g., health reasons).",
+      "why": "business class only with the deputy minister's or CEO's prior approval: international flights, or Canada/USA flights for a reasonable accommodation"
+    },
+    {
+      "lines": [
+        144,
+        149
+      ],
+      "sha256": "43967b73f0205a4025299cd33ac597d7a693c8888708b770edf4b769b77b3d2f",
+      "quote": "Approvers must: • provide approval only for expenses that were necessarily incurred in the performance of ministry or provincial agency/organization business. • provide approval only for claims that include all appropriate documentation (e.g., itemized receipts). • not approve their own expenses.",
+      "why": "approvers may not approve their own expenses"
+    },
+    {
+      "lines": [
+        317,
+        328
+      ],
+      "sha256": "3ff9edf51cc3f42cbd045d5e8257f2d7884ccc11a6bdbbc1642d9d5945222468",
+      "quote": "Chart 2 Level of Approval Required in Provincial Agencies whose Employees are Appointed under section 32 of the PSOA - Commission public bodies Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Chair N/A3 N/A3 Minister Appointee Chair Chair Minister CEO N/A3 N/A3 Secretary of the Cabinet Employee Manager/Supervisor4 CEO Secretary of the Cabinet Consultant Contract Manager CEO Secretary of the Cabinet",
+      "why": "Chart 2: who approves a Commission public body's travel plans"
+    },
+    {
+      "lines": [
+        447,
+        460
+      ],
+      "sha256": "9fa1a8dea679f91d0ee3210781fd80b298cd47fabaeae206ee22b89b28db70de",
+      "quote": "Requests for travel outside Canada must include: • prior documented approval; ministry and Commission public body employees must complete the appropriate form; o Request for Approval for Travel within Canada and the USA form; or o Request for Approval for International Travel form. • acknowledgement that all appropriate approvals are in place; • documented rationale demonstrating critical value of travel for government/ organizational priorities and interests, and how the travel will produce a benefit for the province; • documentation showing detailed itemization of anticipated expenses (note that the lowest cost and most reasonable method of travel must be used); and • confirmation that a security assessment for physical and cyber risk has been completed for the proposed travel destination.",
+      "why": "travel outside Canada: prior approval, lowest-cost method, security assessment"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Business class needs the deputy minister's or CEO's prior approval (lines 559-562), but the traveller is the CEO and approvers may not approve their own expenses (line 149). The Secretary of the Cabinet approved the travel plan of a Commission public body's CEO abroad (Chart 2). The traveller accepts what the policy allows: the lowest fare, KLM via Amsterdam at $879."
+}

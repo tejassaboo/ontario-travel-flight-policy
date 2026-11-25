@@ -1,0 +1,145 @@
+{
+  "id": "kelp-arbor",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option",
+    "outside_air_section"
+  ],
+  "twin_of": "juniper-weir",
+  "twin_fact": "the committee meets at 14:00 or at 10:30",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me Toronto to Ottawa on February 16th, in the morning; the federal-provincial committee meets at 10:30 a.m. that day.",
+  "trip": {
+    "traveller_name": "Catherine Doyle",
+    "traveller_title": "Deputy Minister",
+    "traveller_role": "DEPUTY_MINISTER",
+    "organization": "Ministry of Agriculture and Food",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YOW",
+    "travel_date": "2027-02-16",
+    "return_date": "",
+    "booking_date": "2026-12-09",
+    "business_starts": "2027-02-16 10:30",
+    "purpose": "Federal-provincial committee of agriculture deputies in Ottawa",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YOW",
+        "date": "2027-02-16",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "early": {
+            "carrier": "AC",
+            "depart": "06:45",
+            "minutes": [
+              65
+            ]
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "09:40",
+            "minutes": [
+              65
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "early-economy",
+            "flight": "early",
+            "cabin": "ECONOMY",
+            "fare_cents": 34600
+          },
+          {
+            "slot": "early-business",
+            "flight": "early",
+            "cabin": "BUSINESS",
+            "fare_cents": 61000
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 26800
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "early-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ARRIVES_AFTER_BUSINESS_STARTS",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPENDIX_APPROVAL_SUMMARY",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_MINISTRIES",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        306,
+        315
+      ],
+      "sha256": "b8a756a1802dd13f252fa317c7e117b37f16f715f06259bbaf697cb355e56b75",
+      "quote": "Chart 1 Level of Approval Required in Ministries Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Deputy Minister N/A3 Secretary, TB/MBC Secretary of the Cabinet Employee Manager/Supervisor4 Secretary, TB/MBC Secretary of the Cabinet Consultant Contract Manager Secretary, TB/MBC Secretary of the Cabinet",
+      "why": "Chart 1: who approves a ministry's travel plans, by role and destination"
+    },
+    {
+      "lines": [
+        346,
+        346
+      ],
+      "sha256": "213dfe3c24ef5e19685ebf6366777f0f87b7e80deb244365796f681fddc7bc65",
+      "quote": "3 Given the level of responsibility, no approvals are required.",
+      "why": "footnote 3: N/A means no approval is required"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "No approval is needed (footnote 3). The cheaper WestJet flight lands at 10:45, after the 10:30 meeting starts, so it is not a practical way to get there (line 558); the lowest fare that arrives in time is the 06:45 Air Canada economy seat at $346."
+}

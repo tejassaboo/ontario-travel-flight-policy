@@ -1,0 +1,167 @@
+{
+  "id": "rowan-spindle",
+  "category": "distractor",
+  "overlays": [
+    "multi_traveller"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "My director is already booked on AC 466 from Toronto to Halifax on February 8th. Please put me on the same flight so we can prepare together; if that isn't allowed, book what the policy allows. The fisheries consultation starts at nine the next morning.",
+  "trip": {
+    "traveller_name": "Emily Sato",
+    "traveller_title": "Senior Policy Analyst",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Ministry of Agriculture and Food",
+    "organization_kind": "MINISTRY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YHZ",
+    "travel_date": "2027-02-08",
+    "return_date": "",
+    "booking_date": "2026-12-09",
+    "business_starts": "2027-02-09 09:00",
+    "purpose": "Interprovincial fisheries consultation in Halifax",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "AC 466",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "SECRETARY_TB_MBC",
+        "name": "Helen Okafor",
+        "title": "Secretary, Treasury Board/Management Board of Cabinet",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the travel plan, on the form for travel within Canada and the USA"
+      }
+    ],
+    "travelling_with": [
+      {
+        "name": "Mark Delaney",
+        "title": "Director, Fisheries Policy",
+        "flight_number": "AC 466",
+        "date": "2027-02-08",
+        "cabin": "ECONOMY"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YHZ",
+        "date": "2027-02-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "director": {
+            "carrier": "AC",
+            "depart": "07:30"
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "09:50"
+          },
+          "afternoon": {
+            "carrier": "AC",
+            "depart": "13:00"
+          }
+        },
+        "offers": [
+          {
+            "slot": "director-economy",
+            "flight": "director",
+            "cabin": "ECONOMY",
+            "fare_cents": 47800
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 39900
+          },
+          {
+            "slot": "afternoon-economy",
+            "flight": "afternoon",
+            "cabin": "ECONOMY",
+            "fare_cents": 44100
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "westjet-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "COST_SAVINGS",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "SECRETARY_TB_MBC"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_MINISTRIES",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        306,
+        315
+      ],
+      "sha256": "b8a756a1802dd13f252fa317c7e117b37f16f715f06259bbaf697cb355e56b75",
+      "quote": "Chart 1 Level of Approval Required in Ministries Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Deputy Minister N/A3 Secretary, TB/MBC Secretary of the Cabinet Employee Manager/Supervisor4 Secretary, TB/MBC Secretary of the Cabinet Consultant Contract Manager Secretary, TB/MBC Secretary of the Cabinet",
+      "why": "Chart 1: who approves a ministry's travel plans, by role and destination"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        571,
+        574
+      ],
+      "quote": "the need to work with a team",
+      "why": "a reason for business class on rail, not air"
+    },
+    {
+      "lines": [
+        461,
+        462
+      ],
+      "quote": "When planning any travel, consider business continuity",
+      "why": "a consideration (should senior people travel together), not a fare rule"
+    }
+  ],
+  "design_notes": "Lines 558-559: the lowest fare available is WestJet at $399; the director's Air Canada flight is $478. Wanting to work together is a reason for business class on rail (line 574), not for a dearer flight, and business continuity (lines 461-462) only asks whether senior people should travel together. The Secretary, TB/MBC approved the trip (Chart 1)."
+}

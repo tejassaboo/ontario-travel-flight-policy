@@ -1,0 +1,160 @@
+{
+  "id": "willow-strand",
+  "category": "flag",
+  "overlays": [
+    "approval_required",
+    "date_arithmetic",
+    "month_end",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "quartz-meadow",
+    "opal-thicket"
+  ],
+  "ambiguity_note": "none: the Minister's approval is required and missing once special status has lapsed; the text is clear",
+  "request": "Toronto to Paris on March 9th for the European co-production meetings, which open on the 11th. Our chair approved the trip under the agency's special status, and the security assessment is done. Please book it.",
+  "trip": {
+    "traveller_name": "Gabriel Roy",
+    "traveller_title": "Co-production Manager",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Provincial Music and Media Export Agency (a provincial agency whose staff are not public servants)",
+    "organization_kind": "OTHER_PROVINCIAL_AGENCY",
+    "special_status_granted_on": "2023-08-31",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "CDG",
+    "travel_date": "2027-03-09",
+    "return_date": "",
+    "booking_date": "2026-12-08",
+    "business_starts": "2027-03-11 09:00",
+    "purpose": "European co-production meetings in Paris",
+    "purpose_kind": "NEGOTIATION",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": false,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": true,
+    "sign_offs": [
+      {
+        "role": "CHAIR",
+        "name": "Monique Gagnon",
+        "title": "Chair, Provincial Music and Media Export Agency",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the international travel plan under the agency's special status"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "CDG",
+        "date": "2027-03-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "17:45"
+          },
+          "airfrance": {
+            "carrier": "AF",
+            "depart": "19:30"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 90400
+          },
+          {
+            "slot": "airfrance-economy",
+            "flight": "airfrance",
+            "cabin": "ECONOMY",
+            "fare_cents": 88300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "airfrance-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "SPECIAL_STATUS_LAPSED",
+      "TRAVEL_APPROVAL_LEVEL"
+    ],
+    "approvers": [
+      "DEPUTY_MINISTER",
+      "MINISTER"
+    ],
+    "clauses": [
+      "APPENDIX_SPECIAL_STATUS",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "BEFORE_TRAVELLING",
+      "CHART_OTHER_AGENCIES",
+      "SECURITY_ASSESSMENT",
+      "SPECIAL_STATUS",
+      "TRAVELLING_OUTSIDE_CANADA"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        277,
+        291
+      ],
+      "sha256": "118f14894258cb7dfef86f732b15aa1496d0a6e314704e2f2a4f0ca6efc9ca78",
+      "quote": "For some provincial agencies/organizations, the requirement to travel internationally may be considered integral to their business. To ensure that the approvals process does not have an undue negative effect on the ability of the provincial agency/organization to conduct business, these provincial agencies/organizations may have the opportunity to request special status that would allow the chair to approve international travel instead of the positions listed in Chart 2 or 3. Only TB/MBC can approve special status. Ministries can apply for special status on behalf of their provincial agencies by bringing forward a business case to TB/MBC. If TB/MBC approves special status, the chair may approve international travel or delegate approval authority to the CEO. A provincial agency/organization with special status must report regularly to their ministry, see Appendix A for reporting requirements. Special status is approved for three years only. If special status continues to be required by the provincial agency/organization, the ministry must reapply to TB/MBC.",
+      "why": "special status lets the chair approve international travel; three years only"
+    },
+    {
+      "lines": [
+        1233,
+        1246
+      ],
+      "sha256": "efe68806f68080f682e34f78a2ccbd45a98ff7383e1dde70d5177bf00a24db82",
+      "quote": "• International travel (for provincial agencies/organizations) o The chair has the approval authority for international travel by persons in the provincial agency/organization, except for chair's own travel. o The chair may delegate approval authority to the CEO, except for approvals for appointees and for any positions reporting directly to the chair, including the CEO. o Prior documented approval is required. Role Approval Level Delegation of Authority Chair Minister No delegation Appointee Chair No delegation CEO Chair No delegation Employee Chair May delegate to the CEO Consultant/Contractor Chair May delegate to the CEO",
+      "why": "with special status the chair approves international travel by staff"
+    },
+    {
+      "lines": [
+        330,
+        341
+      ],
+      "sha256": "7a4b6755185472ce63861b156b2341bcd6e977f25e8f316900917e29fc1231b7",
+      "quote": "Chart 3 Level of Approval Required in Provincial Agencies/Organizations whose Employees are Not Appointed under section 32 of the PSOA Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Chair N/A3 N/A3 Minister Appointee Chair Chair Minister CEO N/A3 N/A3 Minister Employee Manager/Supervisor4 CEO Minister Consultant Contract Manager CEO Minister",
+      "why": "Chart 3: who approves other agencies' and organizations' travel plans"
+    },
+    {
+      "lines": [
+        409,
+        412
+      ],
+      "sha256": "6a1340027ea17abcb385525e17571a2860912b7699ed2e2f93b8b4690cf0d5d5",
+      "quote": "• Where required, obtain prior documented approval for travel and use the appropriate forms. As a best practice, obtain prior documented approval for any travel. Note that prior approval is required even in situations where expenses are covered by a third party.",
+      "why": "prior documented approval for travel"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Special status 'is approved for three years only' (line 290): granted 2023-08-31, it lapsed on 2026-08-31, before today. Without it, Chart 3 sends an agency employee's international travel to the Minister (or a deputy minister under the Minister's delegation, lines 360-366). The chair's approval does not stand in. Hold the lowest fare, Air France at $883, for the Minister's approval."
+}

@@ -1,0 +1,161 @@
+{
+  "id": "sorrel-beacon",
+  "category": "distractor",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Toronto to Winnipeg on January 19th for the hearings, which start at nine the next morning. Could you get me a refundable fare, just in case plans shift? The CEO approved the trip.",
+  "trip": {
+    "traveller_name": "Aaron Fischer",
+    "traveller_title": "Case Manager",
+    "traveller_role": "EMPLOYEE",
+    "organization": "Provincial Land and Licensing Hearings Commission (a Commission public body)",
+    "organization_kind": "COMMISSION_PUBLIC_BODY",
+    "special_status_granted_on": "",
+    "contract_covers_travel_costs": false,
+    "home_city": "Toronto",
+    "workplace_city": "Toronto",
+    "origin": "YYZ",
+    "destination": "YWG",
+    "travel_date": "2027-01-19",
+    "return_date": "",
+    "booking_date": "2026-11-30",
+    "business_starts": "2027-01-20 09:00",
+    "purpose": "Licensing hearings in Winnipeg",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_airline": "",
+    "requested_flight": "",
+    "wants_changeable_fare": true,
+    "schedule_often_changes": false,
+    "health_need_on_file": "",
+    "security_review_done": false,
+    "sign_offs": [
+      {
+        "role": "CEO",
+        "name": "Daniel Mercer",
+        "title": "Chief Executive Officer, Provincial Land and Licensing Hearings Commission (a Commission public body)",
+        "subject": "TRAVEL_PLAN",
+        "acting_for": "NONE",
+        "covers": "Approves the trip to Winnipeg"
+      }
+    ],
+    "travelling_with": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "YYZ",
+        "destination": "YWG",
+        "date": "2027-01-19",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aircanada": {
+            "carrier": "AC",
+            "depart": "08:10"
+          },
+          "westjet": {
+            "carrier": "WS",
+            "depart": "11:25"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 41800
+          },
+          {
+            "slot": "aircanada-flex",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 56900,
+            "refundable": true
+          },
+          {
+            "slot": "westjet-economy",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 37500
+          },
+          {
+            "slot": "westjet-flex",
+            "flight": "westjet",
+            "cabin": "ECONOMY",
+            "fare_cents": 51200,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "westjet-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "REFUNDABLE_FARE_NOT_ALLOWED"
+    ],
+    "approvers": [
+      "CEO",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "APPROVALS_FOR_TRAVEL",
+      "APPROVAL_FOR_TRAVEL_PLANS",
+      "CHART_COMMISSION_PUBLIC_BODIES",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        558,
+        559
+      ],
+      "sha256": "a61b2a35e45e5a032f3eaf1be1dec2708acb661ccde2d27db7a791da27ceb12c",
+      "quote": "Air travel is permitted when it is the most practical and economical way to travel. Choose the lowest fare available when purchasing a ticket.",
+      "why": "air when practical and economical; the lowest fare"
+    },
+    {
+      "lines": [
+        317,
+        328
+      ],
+      "sha256": "3ff9edf51cc3f42cbd045d5e8257f2d7884ccc11a6bdbbc1642d9d5945222468",
+      "quote": "Chart 2 Level of Approval Required in Provincial Agencies whose Employees are Appointed under section 32 of the PSOA - Commission public bodies Role Within Ontario2 Outside Ontario, within Canada and the USA International - Outside Canada and the USA Chair N/A3 N/A3 Minister Appointee Chair Chair Minister CEO N/A3 N/A3 Secretary of the Cabinet Employee Manager/Supervisor4 CEO Secretary of the Cabinet Consultant Contract Manager CEO Secretary of the Cabinet",
+      "why": "Chart 2: who approves a Commission public body's travel plans"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        1399,
+        1402
+      ],
+      "quote": "added option for flexibility for those whose schedules frequently change",
+      "why": "the traveller's schedule does not frequently change"
+    },
+    {
+      "lines": [
+        417,
+        420
+      ],
+      "quote": "If there is a change in your itinerary, you should:",
+      "why": "how changes are made, not which fare"
+    }
+  ],
+  "design_notes": "Lines 558-559: the lowest fare available, WestJet's non-refundable $375. The 2020 flexibility note (lines 1399-1402) is for those whose schedules frequently change; this traveller's does not, and itinerary changes (lines 417-420) are made through the travel management company. The CEO approved the trip (Chart 2)."
+}
