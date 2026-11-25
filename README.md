@@ -1,5 +1,7 @@
 # Ontario Travel Directive Flight Booking
 
+**Source of the handbook:** https://files.ontario.ca/tbs-travel-directive-en-2019-11-28.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with the Government of Ontario.** The handbook is the Management Board of Cabinet's *Travel, Meal
 and Hospitality Expenses Directive* (issued November 2004, last amended January 1, 2020), a public provincial
 government directive, bundled verbatim for research. Its source URL was not recorded when it was downloaded
