@@ -8,7 +8,7 @@
   "raw_pdf_sha256": "c421d966767a684a1602e763621e538ac11ee67b4751fff3a42ad151e7605aaa",
   "words": 9623,
   "lines": 1504,
-  "source": "not recorded locally (UNVERIFIED); the raw PDF is the pinned copy (Government of Ontario)",
+  "source": "https://files.ontario.ca/tbs-travel-directive-en-2019-11-28.pdf; byte-identical to the pinned raw PDF (sha256 checked 2026-11-25); published by the Government of Ontario",
   "frozen_on": "2026-11-24",
   "scenario_count": 24,
   "currency": "CAD",
